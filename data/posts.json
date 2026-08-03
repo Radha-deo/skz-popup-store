@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "title": "Building the Theme Switcher",
+      "date": "2026-07-20",
+      "summary": "A breakdown of how the light and dark mode toggle was added and saved with localStorage.",
+      "category": "JavaScript",
+      "content": "I created a persistent theme switcher so users can choose a light or dark display and keep that preference across page loads. The main challenge was making sure the theme loads quickly before the page fully renders. I used localStorage to save the selected theme and applied the setting on every page load. This feature helped me better understand DOM manipulation and state persistence."
+    },
+    {
+      "id": 2,
+      "title": "Creating Dynamic Blog Posts",
+      "date": "2026-07-22",
+      "summary": "How the blog section was connected to a JSON file and rendered dynamically in the browser.",
+      "category": "Data",
+      "content": "For the blog section, I stored all post data in a JSON file and loaded it with JavaScript instead of hard-coding posts in HTML. I sorted the posts by date and displayed them using reusable card elements. This approach made the site easier to maintain and taught me how front-end apps can separate content from layout."
+    },
+    {
+      "id": 3,
+      "title": "Validating the Contact Form",
+      "date": "2026-07-24",
+      "summary": "A look at how I built client-side validation to improve the form experience.",
+      "category": "Forms",
+      "content": "I added validation to the contact form so users get immediate feedback when required fields are missing or incorrect. The name, email, and message fields each have their own checks and error messages. I learned that small usability improvements can make a website feel much more polished and professional."
+    },
+    {
+      "id": 4,
+      "title": "Filtering Products and Posts",
+      "date": "2026-07-26",
+      "summary": "How I added live search to help users find products and posts faster.",
+      "category": "UI",
+      "content": "I implemented live filtering so users can search product cards and blog posts without reloading the page. The filter checks multiple fields like title, category, and description. This feature improved the usability of the site and gave me more practice working with dynamic content and event listeners."
+    }
+  ]
