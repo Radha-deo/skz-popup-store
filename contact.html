@@ -12,28 +12,71 @@
 
   <!-- External Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Internal CSS (Document-level overrides for Phase 1 CSS level requirement) -->
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      font-size: 0.95rem;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--border-color, #ccc);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color, #682e5c);
+      box-shadow: 0 0 0 3px rgba(104, 46, 92, 0.15);
+    }
+    .error-msg {
+      color: #e11d48;
+      font-size: 0.85rem;
+      display: block;
+      margin-top: 0.25rem;
+      min-height: 1.2em;
+    }
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  
-  <!-- SITE HEADER & MAIN NAVIGATION  -->
-  
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">SKZ : UNVEIL</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="products.html">Products</a>
-        <a href="blog.html">News</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
-      <button id="theme-toggle" class="theme-toggle" type="button">Switch to Dark Mode</button>
-    </div>
-  </header>
+  <!-- Dynamic Header Placeholder (Loaded via js/components.js in Phase 2) -->
+  <div id="header-placeholder">
+    <!-- Fallback header markup used before JavaScript loads components/header.html -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">SKZ : UNVEIL</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="products.html">Products</a>
+          <a href="blog.html">News</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button">Switch to Dark Mode</button>
+      </div>
+    </header>
+  </div>
 
-  
   <!-- MAIN CONTENT: CONTACT & FAQ SECTION -->
   <main class="section">
     <div class="container contact-grid">
@@ -55,7 +98,7 @@
           </details>
           <details>
             <summary>How long does the experience take?</summary>
-            <p>Visitors can explore at their own pace. We recommend allowing 1–2 hours.</p>
+            <p>Visitors can explore at their own pace. We recommend allowing 3-5 hours.</p>
           </details>
           <details>
             <summary>Is the experience accessible?</summary>
@@ -63,34 +106,35 @@
           </details>
         </div>
 
-        <div class="social-block">
+        <div class="social-block" style="margin-top: 2rem;">
           <h2>Follow SKZ : UNVEIL</h2>
-          <a href="#">Instagram</a>
-          <a href="#">TikTok</a>
-          <a href="#">X</a>
-          <a href="#">YouTube</a>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">X</a>
+            <a href="#">YouTube</a>
+          </div>
         </div>
       </section>
 
-      <!-- Right Column: Interactive Form (Part 4 Validation Target) -->
+      <!-- Right Column: Interactive Form (Target for js/validate.js) -->
       <section class="content-card">
         <h2>Send a message</h2>
         
         <!-- Form Container with explicit ID for js/validate.js -->
         <form id="contact-form" class="contact-form" novalidate>
-          
           <!-- Name Input -->
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" />
-            <span class="error-msg" id="name-error" style="color:#e11d48; font-size:0.85rem; display:block; margin-top:0.25rem;"></span>
+            <input type="text" id="name" name="name" placeholder="Your full name" aria-describedby="name-error" />
+            <span class="error-msg" id="name-error" aria-live="polite"></span>
           </div>
 
           <!-- Email Input -->
           <div class="form-group" style="margin-top: 1rem;">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your.email@example.com" />
-            <span class="error-msg" id="email-error" style="color:#e11d48; font-size:0.85rem; display:block; margin-top:0.25rem;"></span>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" aria-describedby="email-error" />
+            <span class="error-msg" id="email-error" aria-live="polite"></span>
           </div>
 
           <!-- Subject Input -->
@@ -102,8 +146,8 @@
           <!-- Message Input -->
           <div class="form-group" style="margin-top: 1rem;">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" placeholder="Tell us your question or inquiry (at least 20 characters)..."></textarea>
-            <span class="error-msg" id="message-error" style="color:#e11d48; font-size:0.85rem; display:block; margin-top:0.25rem;"></span>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us your question or inquiry (at least 20 characters)..." aria-describedby="message-error"></textarea>
+            <span class="error-msg" id="message-error" aria-live="polite"></span>
           </div>
 
           <button type="submit" class="btn btn-primary" style="margin-top: 1.5rem;">Send Message</button>
@@ -111,7 +155,7 @@
         </form>
 
         <!-- Dynamic Success Message Container -->
-        <div id="form-success" style="display: none; padding: 1.5rem; background: #e6f4ea; color: #137333; border-radius: 8px; margin-top: 1rem;">
+        <div id="form-success" role="alert" style="display: none; padding: 1.5rem; background: #e6f4ea; color: #137333; border-radius: 8px; margin-top: 1rem;">
           <h3>Thank you for reaching out!</h3>
           <p>Your message has been validated and sent successfully. The SKZ : UNVEIL team will reply soon.</p>
         </div>
@@ -121,42 +165,45 @@
     </div>
   </main>
 
-  <!-- SITE FOOTER     -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>SKZ : UNVEIL</h3>
-        <p>A fictional student concept inspired by Stray Kids and STAY.</p>
+  <!-- Dynamic Footer Placeholder (Loaded via js/components.js in Phase 2) -->
+  <div id="footer-placeholder">
+    <!-- Fallback footer markup used before JavaScript loads components/footer.html -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>SKZ : UNVEIL</h3>
+          <p>A fictional student concept inspired by Stray Kids and STAY.</p>
+        </div>
+        <div>
+          <h3>Site Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="blog.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <ul class="footer-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">X</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h3>Site Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="blog.html">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <div class="container footer-bottom">
+        <p>&copy; 2026 SKZ : UNVEIL. Fictional student concept only.</p>
       </div>
-      <div>
-        <h3>Social</h3>
-        <ul class="footer-links">
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">TikTok</a></li>
-          <li><a href="#">X</a></li>
-          <li><a href="#">YouTube</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2026 SKZ : UNVEIL. Fictional student concept only.</p>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
-  <!-- JAVASCRIPT ATTACHMENTS          -->
-  <script src="js/components.js"></script>
+  <!-- JAVASCRIPT ATTACHMENTS -->
   <script src="js/theme.js"></script>
+  <script src="js/components.js"></script>
   <script src="js/validate.js"></script>
 
 </body>

@@ -4,27 +4,61 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | SKZ : UNVEIL</title>
+  
+  <!-- External Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- External CSS Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Internal CSS (Document-level overrides for Phase 1 CSS level requirement) -->
+  <style>
+    .step-number {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary-color, #682e5c);
+      color: #ffffff;
+      text-align: center;
+      line-height: 28px;
+      font-weight: 700;
+      margin-right: 0.5rem;
+      font-size: 0.875rem;
+    }
+    .service-badge {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent-color, #888);
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">SKZ : UNVEIL</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html" class="active">Services</a>
-        <a href="products.html">Products</a>
-        <a href="blog.html">News</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <button id="theme-toggle" class="theme-toggle" type="button">Switch to Dark Mode</button>
-    </div>
-  </header>
 
+  <!-- Dynamic Header Placeholder (Loaded via js/components.js in Phase 2) -->
+  <div id="header-placeholder">
+    <!-- Fallback header markup used before JavaScript loads components/header.html -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">SKZ : UNVEIL</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html" class="active">Services</a>
+          <a href="products.html">Products</a>
+          <a href="blog.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button">Switch to Dark Mode</button>
+      </div>
+    </header>
+  </div>
+
+  <!-- Main Content Area: Services and Offerings -->
   <main class="section">
     <div class="container">
       <div class="section-heading">
@@ -33,103 +67,111 @@
         <p>Explore, create, and celebrate through a series of interactive spaces designed for fans.</p>
       </div>
 
-      <!-- Main services and key offerings provided by SKZ : UNVEIL -->
+      <!-- Main services and key offerings grid (Option B Requirement) -->
       <div class="service-grid">
         <article class="service-card">
           <h2>SKZ Exhibition</h2>
-          <img src="images/service-music.jpg" alt="Immersive music experience">
-          <p> Our exhibition service provides museum-inspired spaces featuring curated
+          <img src="images/service-music.jpg" alt="Museum-inspired exhibition space with Stray Kids visual displays">
+          <p>
+            Our exhibition service provides museum-inspired spaces featuring curated
             displays, visual collections, and SKZ-inspired installations. Visitors can
             explore creative exhibits designed around different concepts, stories, and
             memorable moments.
-            </p>
-          <a class="btn btn-secondary" href="#">Explore Experience</a>
+          </p>
+          <a class="btn btn-secondary" href="contact.html">Explore Experience</a>
         </article>
 
         <article class="service-card">
           <h2>STAY Photo Zone</h2>
-          <img src="images/service-photo.jpg" alt="Immersive music experience">
-          <p>Our photo booth service provides themed photo setups featuring custom
-          frames, creative backgrounds, and SKZ-inspired displays. Visitors can
-          capture memorable moments through interactive photo experiences designed
-          around different concepts and event themes.</p>         
-        <a class="btn btn-secondary" href="#">View Photo Zones</a>
+          <img src="images/service-photo.jpg" alt="STAY photo booth installation with custom backgrounds and frames">
+          <p>
+            Our photo booth service provides themed photo setups featuring custom
+            frames, creative backgrounds, and SKZ-inspired displays. Visitors can
+            capture memorable moments through interactive photo experiences designed
+            around different concepts and event themes.
+          </p>         
+          <a class="btn btn-secondary" href="contact.html">View Photo Zones</a>
         </article>
 
         <article class="service-card">
           <h2>STAY Creative Zone</h2>
-          <img src="images/service-creative.jpg" alt="Immersive music experience">
-          <p>Our creative activity service provides hands-on experiences featuring fan
-          projects, personalized keepsakes, and interactive activities. Visitors can
-          express their creativity through activities designed to create a unique
-          and memorable experience.  
+          <img src="images/service-creative.jpg" alt="Hands-on fan crafting and activity workstation">
+          <p>
+            Our creative activity service provides hands-on experiences featuring fan
+            projects, personalized keepsakes, and interactive activities. Visitors can
+            express their creativity through activities designed to create a unique
+            and memorable experience.  
           </p>   
-        <a class="btn btn-secondary" href="#">Discover Activities</a>
+          <a class="btn btn-secondary" href="contact.html">Discover Activities</a>
         </article>
 
         <article class="service-card">
           <h2>Message Wall</h2>
-          <img src="images/service-wall.jpg" alt="Immersive music experience">
-          <p>Our message wall service provides displays where visitors can
+          <img src="images/service-wall.jpg" alt="Interactive community message wall with notes from fans">
+          <p>
+            Our message wall service provides displays where visitors can
             leave messages, share memories, and contribute to a community space. Fans
-            can connect with others through a shared display created around the event.</p>
-          <a class="btn btn-secondary" href="#">See the Message Wall</a>
+            can connect with others through a shared display created around the event.
+          </p>
+          <a class="btn btn-secondary" href="contact.html">See the Message Wall</a>
         </article>
 
         <article class="service-card">
-            <h2>Pop-Up Merchandise Events</h2>
-            <img src="images/service-merch.jpg" alt="Immersive music experience">
-            <p>Our merchandise pop-up service provides product displays, shopping spaces,
-                and Stray Kids-inspired collections for fans. Visitors can explore and
-                purchase merchandise through a specially designed pop-up experience. 
-            </p>
-            <a class="btn btn-secondary" href="#">Explore Exhibition</a>
-          </article>
+          <h2>Pop-Up Merchandise Events</h2>
+          <img src="images/service-merch.jpg" alt="Exclusive pop-up merchandise retail display table">
+          <p>
+            Our merchandise pop-up service provides product displays, shopping spaces,
+            and Stray Kids-inspired collections for fans. Visitors can explore and
+            purchase merchandise through a specially designed pop-up experience. 
+          </p>
+          <a class="btn btn-secondary" href="products.html">Explore Collection</a>
+        </article>
 
         <article class="service-card">
           <h2>Cup Sleeve Events</h2>
-          <img src="images/service-event.jpg" alt="Immersive music experience">
-          <p> Our cup sleeve event service provides custom decorations, promotional
+          <img src="images/service-event.jpg" alt="Custom cup sleeve event decorations and cafe gathering setup">
+          <p>
+            Our cup sleeve event service provides custom decorations, promotional
             materials, and fan activities for community gatherings. Visitors can enjoy
             a creative event space designed for celebrating artists and connecting
-            with other STAYS. 
-        </p>
+            with other STAYs. 
+          </p>
           <a class="btn btn-secondary" href="products.html">Explore the Collection</a>
         </article>
       </div>
 
+      <!-- Process Workflow Section -->
       <section class="section-inner">
         <h2>How Our Services Work</h2>
       
-        <div class="steps">
-      
-          <div class="step">
-            <strong>1. Choose a Service</strong>
+        <ol class="steps" style="list-style: none; padding-left: 0;">
+          <li class="step">
+            <h3><span class="step-number">1</span> Choose a Service</h3>
             <p>
               Explore our available services and select the experience or event feature
               that best fits your needs.
             </p>
-          </div>
+          </li>
       
-          <div class="step">
-            <strong>2. Contact Our Team</strong>
+          <li class="step">
+            <h3><span class="step-number">2</span> Contact Our Team</h3>
             <p>
               Reach out to our team with your ideas, questions, or event requirements
               so we can help plan your experience.
             </p>
-          </div>
+          </li>
       
-          <div class="step">
-            <strong>3. Create Your Experience</strong>
+          <li class="step">
+            <h3><span class="step-number">3</span> Create Your Experience</h3>
             <p>
               Work with our team to design a memorable pop-up experience with
               interactive spaces, creative activities, and personalized details.
             </p>
-          </div>
-      
-        </div>
+          </li>
+        </ol>
       </section>
 
+      <!-- Bottom Call To Action -->
       <section class="section-inner center-cta">
         <h2>There’s more to discover inside.</h2>
         <a class="btn btn-primary" href="products.html">View the Collection</a>
@@ -137,37 +179,43 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>SKZ : UNVEIL</h3>
-        <p>Fictional fan pop-up concept created for a university assignment.</p>
+  <!-- Dynamic Footer Placeholder (Loaded via js/components.js in Phase 2) -->
+  <div id="footer-placeholder">
+    <!-- Fallback footer markup used before JavaScript loads components/footer.html -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>SKZ : UNVEIL</h3>
+          <p>Fictional fan pop-up concept created for a university assignment.</p>
+        </div>
+        <div>
+          <h3>Site Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="blog.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <ul class="footer-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">X</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h3>Site Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="blog.html">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <div class="container footer-bottom">
+        <p>&copy; 2026 SKZ : UNVEIL. Fictional student concept only.</p>
       </div>
-      <div>
-        <h3>Social</h3>
-        <ul class="footer-links">
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">TikTok</a></li>
-          <li><a href="#">X</a></li>
-          <li><a href="#">YouTube</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2026 SKZ : UNVEIL. Fictional student concept only.</p>
-    </div>
-  </footer>
+    </footer>
+  </div>
+
+  <!-- JavaScript Scripts for Dynamic Functionality -->
   <script src="js/theme.js"></script>
   <script src="js/components.js"></script>
 </body>

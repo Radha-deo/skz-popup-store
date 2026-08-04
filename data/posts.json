@@ -5,7 +5,8 @@
       "date": "2026-07-01",
       "category": "Company News",
       "summary": "Learn more about the ideas and planning behind SKZ : UNVEIL's event experiences.",
-      "content": "Our goal is to create meaningful experiences through thoughtful event planning, creative spaces, and products that allow fans to celebrate their interests and connect with others."
+      "content": "Our goal is to create meaningful experiences through thoughtful event planning, creative spaces, and products that allow fans to celebrate their interests and connect with others.",
+      "image": ""
     },
     {
       "id": 2,
@@ -13,7 +14,8 @@
       "date": "2026-07-25",
       "category": "Behind the Scenes",
       "summary": "Discover the creative activities and interactive spaces designed to make every visitor experience memorable.",
-      "content": "The STAY Creative Zone provides visitors with opportunities to create personalized keepsakes through interactive stations, fan-inspired activities, and creative displays. Each area is designed to encourage self-expression and connection."
+      "content": "The STAY Creative Zone provides visitors with opportunities to create personalized keepsakes through interactive stations, fan-inspired activities, and creative displays. Each area is designed to encourage self-expression and connection.",
+      "image": ""
     },
     {
       "id": 3,
@@ -21,7 +23,8 @@
       "date": "2026-07-20",
       "category": "Merchandise",
       "summary": "Explore the collectible items, accessories, and event merchandise available throughout the SKZ : UNVEIL experience.",
-      "content": "The SKZ : UNVEIL collection includes event-inspired merchandise such as collectible prints, accessories, activity kits, and keepsakes. Each product is designed to help visitors remember their experience after attending the pop-up."
+      "content": "The SKZ : UNVEIL collection includes event-inspired merchandise such as collectible prints, accessories, activity kits, and keepsakes. Each product is designed to help visitors remember their experience after attending the pop-up.",
+      "image": ""
     },
     {
       "id": 4,
@@ -29,7 +32,8 @@
       "date": "2026-07-15",
       "category": "Event Guide",
       "summary": "Take a closer look at the exhibition areas featuring visual displays, themed installations, and memorable moments.",
-      "content": "The exhibition space allows visitors to explore curated displays inspired by Stray Kids' journey. From visual collections to interactive areas, each section creates a unique experience for fans."
+      "content": "The exhibition space allows visitors to explore curated displays inspired by Stray Kids' journey. From visual collections to interactive areas, each section creates a unique experience for fans.",
+      "image": ""
     },
     {
       "id": 5,
@@ -37,7 +41,8 @@
       "date": "2026-07-10",
       "category": "Services",
       "summary": "Learn more about the photo zones and creative setups available for visitors at SKZ : UNVEIL.",
-      "content": "Our photo experiences feature custom backgrounds, themed frames, and interactive displays that allow visitors to capture special memories during their visit."
+      "content": "Our photo experiences feature custom backgrounds, themed frames, and interactive displays that allow visitors to capture special memories during their visit.",
+      "image": ""
     },
     {
       "id": 6,
@@ -45,6 +50,7 @@
       "date": "2026-07-05",
       "category": "Community Events",
       "summary": "Stay updated on upcoming fan gatherings and community events connected to the SKZ : UNVEIL experience.",
-      "content": "SKZ : UNVEIL continues to create opportunities for fans to connect through community events, including themed gatherings and cup sleeve events featuring creative designs and activities."
+      "content": "SKZ : UNVEIL continues to create opportunities for fans to connect through community events, including themed gatherings and cup sleeve events featuring creative designs and activities.",
+      "image": ""
     }
   ]

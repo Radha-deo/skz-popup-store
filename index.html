@@ -4,69 +4,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SKZ : UNVEIL | Immersive STAY Experience</title>
+  
+  <!-- External Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- External CSS Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- Internal CSS (Document-level overrides for Phase 1 CSS level requirement) -->
   <style>
-    .hero-note { display: inline-block; margin-top: 1rem; padding: 0.45rem 0.8rem; border-radius: 999px; background: rgba(255,255,255,0.12); color: rgb(104, 46, 92); }
+    .hero-note { 
+      display: inline-block; 
+      margin-top: 1rem; 
+      padding: 0.45rem 0.8rem; 
+      border-radius: 999px; 
+      background: rgba(255, 255, 255, 0.12); 
+      color: rgb(104, 46, 92); 
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
 
-    <!-- Website Header and Navigation -->
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">SKZ : UNVEIL</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="products.html">Products</a>
-        <a href="blog.html">News</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <button id="theme-toggle" class="theme-toggle" type="button">Switch to Dark Mode</button>
-    </div>
-  </header>
+  <!-- Dynamic Header Placeholder (Loaded via js/components.js) -->
+  <div id="header-placeholder">
+    <!-- Fallback header markup used before JavaScript loads components/header.html -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">SKZ : UNVEIL</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="products.html">Products</a>
+          <a href="blog.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button">Switch to Dark Mode</button>
+      </div>
+    </header>
+  </div>
 
-  <!-- Hero Section: Main welcome message and brand introduction -->
+  <!-- Main Content Area -->
   <main>
+    <!-- Hero Section: Main welcome message and brand introduction -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-            <span class="eyebrow">Fan Event Planning & Experiences</span>
-            <h1>Step into the world of Stray Kids.</h1>
-            <p class="lead">
-              SKZ : UNVEIL is a fan event planning company that creates and organizes themed pop-up experiences.
-              We design exhibitions, interactive activities, photo zones, merchandise events, and community
-              experiences that allow fans to connect and create lasting memories.
-            </p>
+          <span class="eyebrow">Fan Event Planning & Experiences</span>
+          <h1>Creating unforgettable moments for STAY</h1>
+          <p class="lead">
+            SKZ : UNVEIL is a fan event planning company that creates and organizes themed pop-up experiences
+            for STAY, the official fandom of Stray Kids. We design exhibitions, interactive activities,
+            photo zones, merchandise events, and community experiences that allow fans to connect and
+            create lasting memories.
+          </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="services.html">Explore the Experience</a>
             <a class="btn btn-secondary" href="products.html">View Collection</a>
           </div>
-          <p class="hero-note">Toronto, Ontario</p>
+          <!-- Internal CSS class applied here -->
+          <span class="hero-note">✦ Official Summer 2026 Pop-Up Concept</span>
         </div>
 
         <div class="hero-panel">
           <img src="images/home-hero.jpg" alt="Concert-inspired fan meeting with lights and displays" />
-          <div class="hero-card">
-            <h2>SKZ : UNVEIL</h2>
-            <p>A Stray Kids-inspired pop-up experience for STAY.</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Highlighting the main activities and features visitors can explore -->
+    <!-- Feature Section: Highlighting key pop-up experiences -->
     <section class="section">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">Welcome</span>
           <h2>Bringing fan ideas to life through creative events</h2>
-          <p>
-            SKZ : UNVEIL creates unique fan experiences through carefully designed spaces, activities, and event services.</p>
+          <p>SKZ : UNVEIL creates unique fan experiences through carefully designed spaces, activities, and event services.</p>
         </div>
 
         <div class="feature-grid">
@@ -90,34 +106,40 @@
       </div>
     </section>
 
-    <section class="section alt-section">
-      <div class="container two-col">
-        <div>
-          <span class="eyebrow">Why visit?</span>
-          <h2>A space to celebrate, create, and connect</h2>
-          <p>
-            This concept was designed to feel like a real pop-up experience with a polished brand
-            identity, clear event information, and meaningful fan-centered activities.
-          </p>
+   <!-- Info Section: Value proposition & purpose -->
+<section class="section alt-section">
+    <div class="container">
+  
+      <div class="section-heading">
+        <span class="eyebrow">Why visit?</span>
+        <h2>A space to celebrate, create, and connect</h2>
+        <p>
+          SKZ : UNVEIL creates engaging fan experiences through thoughtful event planning,
+          interactive activities, and creative spaces designed to bring communities together.
+        </p>
+      </div>
+  
+      <div class="info-list">
+        <div class="info-item">
+          <h3>Celebrate the music</h3>
+          <p>Experience visuals and storytelling inspired by Stray Kids' creative world.</p>
         </div>
-
-        <div class="info-list">
-          <div class="info-item">
-            <h3>Celebrate the music</h3>
-            <p>Experience visuals and storytelling inspired by Stray Kids’ creative world.</p>
-          </div>
-          <div class="info-item">
-            <h3>Create memories</h3>
-            <p>Take photos, participate in activities, and leave with something personal.</p>
-          </div>
-          <div class="info-item">
-            <h3>Connect with STAY</h3>
-            <p>Share the experience with fellow fans in an inclusive and welcoming environment.</p>
-          </div>
+  
+        <div class="info-item">
+          <h3>Create memories</h3>
+          <p>Take photos, participate in activities, and leave with something personal.</p>
+        </div>
+  
+        <div class="info-item">
+          <h3>Connect with STAY</h3>
+          <p>Share the experience with fellow fans in an inclusive and welcoming environment.</p>
         </div>
       </div>
-    </section>
+  
+    </div>
+  </section>
 
+    <!-- Call to Action Section -->
     <section class="section cta-section">
       <div class="container cta-box">
         <h2>Ready to UNVEIL the experience?</h2>
@@ -127,62 +149,66 @@
     </section>
   
     <!-- STAY Gallery: Visual showcase of the pop-up experience -->
-        <section class="section gallery-section">
-            <div class="container">
-              <div class="section-heading">
-                <span class="eyebrow">STAY Gallery</span>
-                <h2>Moments inspired by SKZ : UNVEIL</h2>
-                <p>
-                  A collection of music, creativity, and fan-inspired moments celebrating
-                  the energy behind the experience.
-                </p>
-              </div>
-      
-              <div class="gallery-row">
-                <img src="images/gallery-1.jpg" alt="SKZ hand gesture">
-                <img src="images/gallery-2.jpg" alt="SKZOO inspired fan moment">
-                <img src="images/gallery-3.jpg" alt="Stray Kids performance inspired image">
-                <img src="images/gallery-4.jpg" alt="STAY inspired creative display">
-                <img src="images/gallery-5.jpg" alt="Stray Kids inspired photo display">
-                <img src="images/gallery-6.jpg" alt="Stray Kids inspired banner display">
-              </div>
-            </div>
-          </section>
+    <section class="section gallery-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">STAY Gallery</span>
+          <h2>Moments inspired by SKZ : UNVEIL</h2>
+          <p>
+            A collection of music, creativity, and fan-inspired moments celebrating
+            the energy behind the experience.
+          </p>
+        </div>
 
-        </main>
+        <div class="gallery-row">
+          <img src="images/gallery-1.jpg" alt="SKZ hand gesture">
+          <img src="images/gallery-2.jpg" alt="SKZOO inspired fan moment">
+          <img src="images/gallery-3.jpg" alt="Stray Kids performance inspired image">
+          <img src="images/gallery-4.jpg" alt="STAY inspired creative display">
+          <img src="images/gallery-5.jpg" alt="Stray Kids inspired photo display">
+          <img src="images/gallery-6.jpg" alt="Stray Kids inspired banner display">
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <!-- Website Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>SKZ : UNVEIL</h3>
-        <p>Step into the world of Stray Kids through a fictional fan pop-up experience created for STAY.</p>
+  <!-- Dynamic Footer Placeholder (Loaded via js/components.js) -->
+  <div id="footer-placeholder">
+    <!-- Fallback footer markup used before JavaScript loads components/footer.html -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>SKZ : UNVEIL</h3>
+          <p>Step into the world of Stray Kids through a fictional fan pop-up experience created for STAY.</p>
+        </div>
+        <div>
+          <h3>Site Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="blog.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <ul class="footer-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">X</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h3>Site Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="blog.html">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <div class="container footer-bottom">
+        <p>&copy; 2026 SKZ : UNVEIL. Fictional student concept only.</p>
       </div>
-      <div>
-        <h3>Social</h3>
-        <ul class="footer-links">
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">TikTok</a></li>
-          <li><a href="#">X</a></li>
-          <li><a href="#">YouTube</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2026 SKZ : UNVEIL. Fictional student concept only.</p>
-    </div>
-  </footer>
+    </footer>
+  </div>
+
+  <!-- JavaScript Scripts for Dynamic Functionality -->
   <script src="js/theme.js"></script>
   <script src="js/components.js"></script>
 </body>

@@ -5,39 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products | SKZ : UNVEIL</title>
 
-  <!-- Typography & Google Fonts -->
+  <!-- External Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <!-- External Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Internal CSS (Document-level overrides for Phase 1 CSS level requirement) -->
+  <style>
+    .filter-wrap input[type="text"] {
+      width: 100%;
+      max-width: 500px;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border-color, #ccc);
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .filter-wrap input[type="text"]:focus {
+      outline: none;
+      border-color: var(--primary-color, #682e5c);
+      box-shadow: 0 0 0 3px rgba(104, 46, 92, 0.15);
+    }
+    .tag {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      background: var(--card-bg, rgba(0,0,0,0.05));
+      color: var(--primary-color, #682e5c);
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
 <body>
   
-  <!-- =================================================================== -->
-  <!-- SITE HEADER & MAIN NAVIGATION                                       -->
-  <!-- =================================================================== -->
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">SKZ : UNVEIL</a>
+  <!-- Dynamic Header Placeholder (Loaded via js/components.js in Phase 2) -->
+  <div id="header-placeholder">
+    <!-- Fallback header markup used before JavaScript loads components/header.html -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">SKZ : UNVEIL</a>
 
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="products.html" class="active">Products</a>
-        <a href="blog.html">News</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="products.html" class="active">Products</a>
+          <a href="blog.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
 
-      <button id="theme-toggle" class="theme-toggle" type="button">Switch to Dark Mode</button>
-    </div>
-  </header>
+        <button id="theme-toggle" class="theme-toggle" type="button">Switch to Dark Mode</button>
+      </div>
+    </header>
+  </div>
 
-  <!-- =================================================================== -->
-  <!-- MAIN CONTENT: PRODUCTS SECTION                                      -->
-  <!-- =================================================================== -->
+  <!-- Main Content Area: Products Section -->
   <main class="section">
     <div class="container">
 
@@ -48,10 +78,10 @@
         <p>Limited-edition keepsakes inspired by the pop-up experience. Use the filter to explore items quickly.</p>
       </div>
   
-      <!-- Live Filter / Search Control (Part 5 Requirement) -->
+      <!-- Live Filter / Search Control -->
       <div class="filter-wrap">
-        <input type="text" id="filter-input" placeholder="Search products by name, category, or description..." />
-        <p id="no-results" style="display: none;">No results found.</p>
+        <input type="text" id="filter-input" placeholder="Search products by name, category, or description..." aria-label="Search products" />
+        <p id="no-results" style="display: none; color: #888; font-style: italic;">No matching products found.</p>
       </div>
   
       <!-- Product Showcase Grid -->
@@ -64,7 +94,7 @@
             <span class="tag">apparel</span>
             <h2 class="card-title">Event Welcome Canvas Tote</h2>
             <p>Official event canvas tote designed to carry all your pop-up merchandise, decorated with SKZOO character graphics and event emblem.</p>
-            <a class="btn btn-secondary" href="#">View Details</a>
+            <a class="btn btn-secondary" href="contact.html">View Details</a>
           </div>
         </article>
   
@@ -75,7 +105,7 @@
             <span class="tag">collectibles</span>
             <h2 class="card-title">UNVEIL Gallery Concept Prints</h2>
             <p>Complete 8-member Polaroid mini poster set showcasing exclusive concept photography featured throughout the pop-up gallery.</p>
-            <a class="btn btn-secondary" href="#">View Details</a>
+            <a class="btn btn-secondary" href="contact.html">View Details</a>
           </div>
         </article>
 
@@ -85,8 +115,8 @@
           <div class="product-body">
             <span class="tag">collectibles</span>
             <h2 class="card-title">Photocard Binder & Deco Organizer Kit</h2>
-            <p>A customizable collection kit designed for organizing, displaying, and decorating photocards collected throughout the SKZ : UNVEIL experience. The kit includes a multi-pocket binder, decorative stickers, themed accessories, and creative elements that allow visitors to personalize their own collection style.</p>
-            <a class="btn btn-secondary" href="#">View Details</a>
+            <p>A customizable collection kit designed for organizing, displaying, and decorating photocards collected throughout the SKZ : UNVEIL experience. Includes a multi-pocket binder and sticker pack.</p>
+            <a class="btn btn-secondary" href="contact.html">View Details</a>
           </div>
         </article>
 
@@ -97,7 +127,7 @@
             <span class="tag">collectibles</span>
             <h2 class="card-title">Mystery Event Blind Pack</h2>
             <p>Sealed holographic pouch containing a handmade beaded strap, event stickers, and a surprise collectible mini photo card.</p>
-            <a class="btn btn-secondary" href="#">View Details</a>
+            <a class="btn btn-secondary" href="contact.html">View Details</a>
           </div>
         </article>
 
@@ -108,7 +138,7 @@
             <span class="tag">accessories</span>
             <h2 class="card-title">DIY Craft Station Phone Strap</h2>
             <p>Handcrafted phone strap featuring member letter beads, bow charms, and 3D character figures assembled at the event craft booth.</p>
-            <a class="btn btn-secondary" href="#">View Details</a>
+            <a class="btn btn-secondary" href="contact.html">View Details</a>
           </div>
         </article>
 
@@ -119,7 +149,7 @@
             <span class="tag">collectibles</span>
             <h2 class="card-title">Event Bundle</h2>
             <p>Premium event package featuring an official image fan (picket), full photocard set, event ticket print, and matching plush keyring.</p>
-            <a class="btn btn-secondary" href="#">View Details</a>
+            <a class="btn btn-secondary" href="contact.html">View Details</a>
           </div>
         </article>
 
@@ -130,7 +160,7 @@
             <span class="tag">accessories</span>
             <h2 class="card-title">Official Pop-Up Charm Bracelet</h2>
             <p>Silver chain bracelet featuring colorful enamel SKZOO character charms and a mini Nachimbong lightstick pendant.</p>
-            <a class="btn btn-secondary" href="#">View Details</a>
+            <a class="btn btn-secondary" href="contact.html">View Details</a>
           </div>
         </article>
 
@@ -141,7 +171,7 @@
             <span class="tag">collectibles</span>
             <h2 class="card-title">Interactive Deco Station Starter Set</h2>
             <p>Event deco kit including exclusive photocard prints, heart-frame top loaders, lace sleeves, and collectible backing cards.</p>
-            <a class="btn btn-secondary" href="#">View Details</a>
+            <a class="btn btn-secondary" href="contact.html">View Details</a>
           </div>
         </article>
 
@@ -152,7 +182,7 @@
             <span class="tag">collectibles</span>
             <h2 class="card-title">Pop-Up Event Memo Pad & Notepad Set</h2>
             <p>Custom stationery pads featuring illustrated SKZOO character borders, perfect for fan message boards.</p>
-            <a class="btn btn-secondary" href="#">View Details</a>
+            <a class="btn btn-secondary" href="contact.html">View Details</a>
           </div>
         </article>
 
@@ -160,44 +190,43 @@
     </div>
   </main>
 
-  <!-- =================================================================== -->
-  <!-- SITE FOOTER                                                         -->
-  <!-- =================================================================== -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>SKZ : UNVEIL</h3>
-        <p>Limited-edition event collection created for a fictional fan pop-up concept.</p>
+  <!-- Dynamic Footer Placeholder (Loaded via js/components.js in Phase 2) -->
+  <div id="footer-placeholder">
+    <!-- Fallback footer markup used before JavaScript loads components/footer.html -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>SKZ : UNVEIL</h3>
+          <p>Limited-edition event collection created for a fictional fan pop-up concept.</p>
+        </div>
+        <div>
+          <h3>Site Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="blog.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <ul class="footer-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">X</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h3>Site Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="blog.html">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <div class="container footer-bottom">
+        <p>&copy; 2026 SKZ : UNVEIL. Fictional student concept only.</p>
       </div>
-      <div>
-        <h3>Social</h3>
-        <ul class="footer-links">
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">TikTok</a></li>
-          <li><a href="#">X</a></li>
-          <li><a href="#">YouTube</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2026 SKZ : UNVEIL. Fictional student concept only.</p>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
-  <!-- =================================================================== -->
-  <!-- JAVASCRIPT ATTACHMENTS                                              -->
-  <!-- =================================================================== -->
+  <!-- JavaScript Attachments -->
   <script src="js/theme.js"></script>
   <script src="js/components.js"></script>
   <script src="js/filter.js"></script>

@@ -15,36 +15,59 @@
 
   <!-- External Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Internal CSS (Document-level overrides for Phase 1 CSS level requirement) -->
+  <style>
+    .filter-wrap input[type="text"] {
+      width: 100%;
+      max-width: 500px;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border-color, #ccc);
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .filter-wrap input[type="text"]:focus {
+      outline: none;
+      border-color: var(--primary-color, #682e5c);
+      box-shadow: 0 0 0 3px rgba(104, 46, 92, 0.15);
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
 
-  
-  <!-- SITE HEADER & MAIN NAVIGATION   -->
-  <!-- Dynamic placeholder container if using components.js, or static nav -->
-  
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <!-- Brand / Logo Link -->
-      <a class="brand" href="index.html">SKZ : UNVEIL</a>
+  <!-- Dynamic Header Placeholder (Loaded via js/components.js in Phase 2) -->
+  <div id="header-placeholder">
+    <!-- Fallback header markup used before JavaScript loads components/header.html -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <!-- Brand / Logo Link -->
+        <a class="brand" href="index.html">SKZ : UNVEIL</a>
 
-      <!-- Primary Site Navigation Links -->
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="products.html">Products</a>
-        <a href="blog.html" class="active">News</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+        <!-- Primary Site Navigation Links -->
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="products.html">Products</a>
+          <a href="blog.html" class="active">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
 
-      <!-- Theme Switcher Toggle Button (Part 1) -->
-      <button id="theme-toggle" class="theme-toggle" type="button">Switch to Dark Mode</button>
-    </div>
-  </header>
+        <!-- Theme Switcher Toggle Button -->
+        <button id="theme-toggle" class="theme-toggle" type="button">Switch to Dark Mode</button>
+      </div>
+    </header>
+  </div>
 
-
-  <!-- MAIN CONTENT: NEWS / JOURNAL SECTION  -->
-
+  <!-- MAIN CONTENT: NEWS / JOURNAL SECTION -->
   <main class="section">
     <div class="container">
 
@@ -55,67 +78,66 @@
         <p>Behind the experience, event updates, and STAY-focused stories.</p>
       </div>
 
-      <!-- Search Input Wrapper (Part 5 - Filter Feature) -->
+      <!-- Search Input Wrapper (Live Filter Feature) -->
       <div class="filter-wrap">
-        <input type="text" id="filter-input" placeholder="Search news posts..." />
+        <input type="text" id="filter-input" placeholder="Search news posts..." aria-label="Search news articles" />
         <!-- Message displayed dynamically by JS when no search matches exist -->
-        <p id="no-results" style="display: none;">No results found.</p>
+        <p id="no-results" style="display: none; color: #888; font-style: italic;">No news posts found matching your query.</p>
       </div>
 
-      
-      <!-- DYNAMIC POST CONTAINER (Part 3 & Part 6)                         -->
-      <!-- Hardcoded cards removed so js/blog.js can dynamically fetch     -->
-      <!-- and inject posts from data/posts.json.                          -->
+      <!-- DYNAMIC POST CONTAINER -->
+      <!-- Posts dynamically fetched and injected from data/posts.json via js/blog.js -->
       <div id="blog-list" class="blog-grid"></div>
 
     </div>
   </main>
 
-  <!--- site footer ---> 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <!-- Brand Mission / Note -->
-      <div>
-        <h3>SKZ : UNVEIL</h3>
-        <p>Fictional journal updates for a student-designed pop-up experience concept.</p>
+  <!-- Dynamic Footer Placeholder (Loaded via js/components.js in Phase 2) -->
+  <div id="footer-placeholder">
+    <!-- Fallback footer markup used before JavaScript loads components/footer.html -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <!-- Brand Mission / Note -->
+        <div>
+          <h3>SKZ : UNVEIL</h3>
+          <p>Fictional journal updates for a student-designed pop-up experience concept.</p>
+        </div>
+
+        <!-- Quick Navigation Footer Links -->
+        <div>
+          <h3>Site Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="blog.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div>
+          <h3>Social</h3>
+          <ul class="footer-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">X</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Quick Navigation Footer Links -->
-      <div>
-        <h3>Site Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="blog.html">News</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <!-- Copyright Notice -->
+      <div class="container footer-bottom">
+        <p>&copy; 2026 SKZ : UNVEIL. Fictional student concept only.</p>
       </div>
-
-      <!-- Social Media Links -->
-      <div>
-        <h3>Social</h3>
-        <ul class="footer-links">
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">TikTok</a></li>
-          <li><a href="#">X</a></li>
-          <li><a href="#">YouTube</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Copyright Notice -->
-    <div class="container footer-bottom">
-      <p>&copy; 2026 SKZ : UNVEIL. Fictional student concept only.</p>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <!-- JAVASCRIPT ATTACHMENTS -->
-  <!-- Placed at the end of body to ensure DOM elements render first      -->
-
-  <script src="js/components.js"></script> <!-- Loads header/footer if enabled -->
   <script src="js/theme.js"></script>      <!-- Handles dark/light theme switching -->
+  <script src="js/components.js"></script> <!-- Loads header/footer placeholders -->
   <script src="js/blog.js"></script>       <!-- Fetches posts.json & renders post cards -->
   <script src="js/filter.js"></script>     <!-- Filters post cards live via search -->
 
