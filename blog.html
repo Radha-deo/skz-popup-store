@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+  <!-- Basic Meta Tags -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Page Title -->
   <title>News | SKZ : UNVEIL</title>
+
+  <!-- Typography & Google Fonts Preconnections -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  
+  <!-- SITE HEADER & MAIN NAVIGATION   -->
+  <!-- Dynamic placeholder container if using components.js, or static nav -->
+  
   <header class="site-header">
     <div class="container nav-wrap">
+      <!-- Brand / Logo Link -->
       <a class="brand" href="index.html">SKZ : UNVEIL</a>
+
+      <!-- Primary Site Navigation Links -->
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -21,73 +36,51 @@
         <a href="blog.html" class="active">News</a>
         <a href="contact.html">Contact</a>
       </nav>
+
+      <!-- Theme Switcher Toggle Button (Part 1) -->
       <button id="theme-toggle" class="theme-toggle" type="button">Switch to Dark Mode</button>
     </div>
   </header>
 
+
+  <!-- MAIN CONTENT: NEWS / JOURNAL SECTION  -->
+
   <main class="section">
     <div class="container">
+
+      <!-- Section Title & Subheading -->
       <div class="section-heading">
-        <span class="eyebrow">News / Blog</span>
+        <span class="eyebrow">News</span>
         <h1>SKZ : UNVEIL Journal</h1>
-        <p>Behind the experience, event updates, and fan-focused stories. These posts will later be loaded dynamically through JavaScript.</p>
+        <p>Behind the experience, event updates, and STAY-focused stories.</p>
       </div>
 
+      <!-- Search Input Wrapper (Part 5 - Filter Feature) -->
       <div class="filter-wrap">
         <input type="text" id="filter-input" placeholder="Search news posts..." />
-        <p id="no-results">No results found.</p>
+        <!-- Message displayed dynamically by JS when no search matches exist -->
+        <p id="no-results" style="display: none;">No results found.</p>
       </div>
 
-      <div id="blog-list" class="blog-grid">
-        <article class="blog-card post-card">
-          <div class="blog-body">
-            <span class="tag">Event News</span>
-            <h2 class="card-title">SKZ : UNVEIL Is Coming to Toronto</h2>
-            <p class="meta">August 1, 2026</p>
-            <p>We're excited to announce the upcoming SKZ : UNVEIL pop-up experience. Discover immersive spaces, creative activities, and exclusive keepsakes.</p>
-            <a class="btn btn-secondary" href="#">Read More</a>
-          </div>
-        </article>
+      
+      <!-- DYNAMIC POST CONTAINER (Part 3 & Part 6)                         -->
+      <!-- Hardcoded cards removed so js/blog.js can dynamically fetch     -->
+      <!-- and inject posts from data/posts.json.                          -->
+      <div id="blog-list" class="blog-grid"></div>
 
-        <article class="blog-card post-card">
-          <div class="blog-body">
-            <span class="tag">Behind the Scenes</span>
-            <h2 class="card-title">A First Look Inside the STAY Creative Zone</h2>
-            <p class="meta">July 25, 2026</p>
-            <p>Creativity is at the heart of SKZ : UNVEIL. Take a first look at the activities designed to give fans a chance to create and connect.</p>
-            <a class="btn btn-secondary" href="#">Read More</a>
-          </div>
-        </article>
-
-        <article class="blog-card post-card">
-          <div class="blog-body">
-            <span class="tag">Merchandise</span>
-            <h2 class="card-title">Inside the SKZ : UNVEIL Collection</h2>
-            <p class="meta">July 20, 2026</p>
-            <p>From commemorative photocards to event-exclusive keepsakes, discover the products created to remember your visit.</p>
-            <a class="btn btn-secondary" href="#">Read More</a>
-          </div>
-        </article>
-
-        <article class="blog-card post-card">
-          <div class="blog-body">
-            <span class="tag">Event Guide</span>
-            <h2 class="card-title">5 Things to Explore at SKZ : UNVEIL</h2>
-            <p class="meta">July 15, 2026</p>
-            <p>Planning your visit? Here's a look at five experiences you won't want to miss, including the photo zones and creative activities.</p>
-            <a class="btn btn-secondary" href="#">Read More</a>
-          </div>
-        </article>
-      </div>
     </div>
   </main>
 
+  <!--- site footer ---> 
   <footer class="site-footer">
     <div class="container footer-grid">
+      <!-- Brand Mission / Note -->
       <div>
         <h3>SKZ : UNVEIL</h3>
         <p>Fictional journal updates for a student-designed pop-up experience concept.</p>
       </div>
+
+      <!-- Quick Navigation Footer Links -->
       <div>
         <h3>Site Links</h3>
         <ul class="footer-links">
@@ -99,6 +92,8 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
+
+      <!-- Social Media Links -->
       <div>
         <h3>Social</h3>
         <ul class="footer-links">
@@ -109,9 +104,20 @@
         </ul>
       </div>
     </div>
+
+    <!-- Copyright Notice -->
     <div class="container footer-bottom">
       <p>&copy; 2026 SKZ : UNVEIL. Fictional student concept only.</p>
     </div>
   </footer>
+
+  <!-- JAVASCRIPT ATTACHMENTS -->
+  <!-- Placed at the end of body to ensure DOM elements render first      -->
+
+  <script src="js/components.js"></script> <!-- Loads header/footer if enabled -->
+  <script src="js/theme.js"></script>      <!-- Handles dark/light theme switching -->
+  <script src="js/blog.js"></script>       <!-- Fetches posts.json & renders post cards -->
+  <script src="js/filter.js"></script>     <!-- Filters post cards live via search -->
+
 </body>
 </html>

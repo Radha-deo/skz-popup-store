@@ -1,24 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
     const filterInput = document.getElementById("filter-input");
     const noResults = document.getElementById("no-results");
-    const cards = document.querySelectorAll(".project-card");
   
-    if (!filterInput || !noResults || !cards.length) return;
+    if (!filterInput) return;
   
     filterInput.addEventListener("input", function () {
       const query = this.value.toLowerCase().trim();
       let visibleCount = 0;
   
-      cards.forEach(function (card) {
-        const title = card.querySelector(".card-title")?.textContent.toLowerCase() || "";
+      // Target product cards on products.html OR blog cards on blog.html
+      const cards = document.querySelectorAll(".product-card, .post-card, .blog-card, .card");
+  
+      cards.forEach(card => {
         const text = card.textContent.toLowerCase();
-  
-        const match = title.includes(query) || text.includes(query);
-  
+        const match = text.includes(query);
+        
         card.style.display = match ? "" : "none";
         if (match) visibleCount++;
       });
   
-      noResults.style.display = visibleCount === 0 ? "block" : "none";
+      // Toggle "No results found" message
+      if (noResults) {
+        noResults.style.display = (visibleCount === 0 && query !== "") ? "block" : "none";
+      }
     });
   });

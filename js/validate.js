@@ -1,78 +1,85 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
-    const messageBox = document.getElementById("form-message");
+    const successMsg = document.getElementById("form-success");
   
     if (!form) return;
   
+    // Show error message beneath field
     function showError(fieldId, message) {
-      const field = document.getElementById(fieldId);
-      let error = field.parentElement.querySelector(".error-msg");
-  
-      if (!error) {
-        error = document.createElement("span");
-        error.className = "error-msg";
-        field.insertAdjacentElement("afterend", error);
+      const errorSpan = document.getElementById(fieldId + "-error");
+      if (errorSpan) {
+        errorSpan.textContent = message;
       }
-  
-      error.textContent = message;
     }
   
+    // Clear error message for field
     function clearError(fieldId) {
-      const field = document.getElementById(fieldId);
-      const error = field.parentElement.querySelector(".error-msg");
-      if (error) error.remove();
+      const errorSpan = document.getElementById(fieldId + "-error");
+      if (errorSpan) {
+        errorSpan.textContent = "";
+      }
     }
   
+    // Regex check for email formatting
     function validateEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
   
+    // Intercept submit event
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-  
       let isValid = true;
   
       const name = document.getElementById("name").value.trim();
       const email = document.getElementById("email").value.trim();
-      const subject = document.getElementById("subject").value.trim();
       const message = document.getElementById("message").value.trim();
   
-      ["name", "email", "subject", "message"].forEach(clearError);
-  
-      if (!name) {
+      // 1. Validate Name (Not empty)
+      if (name === "") {
         showError("name", "Please enter your name.");
         isValid = false;
+      } else {
+        clearError("name");
       }
   
-      if (!email) {
+      // 2. Validate Email (Not empty and valid format)
+      if (email === "") {
         showError("email", "Please enter your email address.");
         isValid = false;
       } else if (!validateEmail(email)) {
-        showError("email", "Please enter a valid email address.");
+        showError("email", "Please enter a valid email address (e.g. name@domain.com).");
         isValid = false;
-      }
-  
-      if (!subject) {
-        showError("subject", "Please enter a subject.");
-        isValid = false;
-      }
-  
-      if (message.length < 20) {
-        showError("message", "Please enter at least 20 characters.");
-        isValid = false;
-      }
-  
-      if (isValid) {
-        messageBox.textContent = "Thank you! Your message has been sent successfully.";
-        form.reset();
       } else {
-        messageBox.textContent = "";
+        clearError("email");
+      }
+  
+      // 3. Validate Message (At least 20 characters)
+      if (message === "") {
+        showError("message", "Please enter a message.");
+        isValid = false;
+      } else if (message.length < 20) {
+        showError("message", `Message must be at least 20 characters (currently ${message.length}).`);
+        isValid = false;
+      } else {
+        clearError("message");
+      }
+  
+      // 4. On successful validation
+      if (isValid) {
+        form.style.display = "none";
+        if (successMsg) {
+          successMsg.style.display = "block";
+        }
       }
     });
   
-    ["name", "email", "subject", "message"].forEach(function (id) {
-      document.getElementById(id).addEventListener("input", function () {
-        clearError(id);
-      });
+    // Clear errors live as user types
+    ["name", "email", "message"].forEach(function (id) {
+      const inputElem = document.getElementById(id);
+      if (inputElem) {
+        inputElem.addEventListener("input", function () {
+          clearError(id);
+        });
+      }
     });
   });

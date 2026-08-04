@@ -4,15 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products | SKZ : UNVEIL</title>
+
+  <!-- Typography & Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  
+  <!-- =================================================================== -->
+  <!-- SITE HEADER & MAIN NAVIGATION                                       -->
+  <!-- =================================================================== -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html">SKZ : UNVEIL</a>
+
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -21,26 +30,34 @@
         <a href="blog.html">News</a>
         <a href="contact.html">Contact</a>
       </nav>
+
       <button id="theme-toggle" class="theme-toggle" type="button">Switch to Dark Mode</button>
     </div>
   </header>
 
+  <!-- =================================================================== -->
+  <!-- MAIN CONTENT: PRODUCTS SECTION                                      -->
+  <!-- =================================================================== -->
   <main class="section">
     <div class="container">
+
+      <!-- Section Heading -->
       <div class="section-heading">
         <span class="eyebrow">Products</span>
         <h1>The SKZ : UNVEIL collection</h1>
         <p>Limited-edition keepsakes inspired by the pop-up experience. Use the filter to explore items quickly.</p>
       </div>
   
+      <!-- Live Filter / Search Control (Part 5 Requirement) -->
       <div class="filter-wrap">
         <input type="text" id="filter-input" placeholder="Search products by name, category, or description..." />
         <p id="no-results" style="display: none;">No results found.</p>
       </div>
   
+      <!-- Product Showcase Grid -->
       <div class="product-grid">
   
-        <!-- Product 1 -->
+        <!-- Product Card 1 -->
         <article class="product-card">
           <img src="images/photo-output.jpeg" alt="Event Welcome Canvas Tote" />
           <div class="product-body">
@@ -51,51 +68,51 @@
           </div>
         </article>
   
-        <!-- Product 2 -->
-
+        <!-- Product Card 2 -->
         <article class="product-card">
-            <img src="images/IMG_4382.jpg" alt="UNVEIL Gallery Concept Prints" />
-            <div class="product-body">
-              <span class="tag">collectibles</span>
-              <h2 class="card-title">UNVEIL Gallery Concept Prints</h2>
-              <p>Complete 8-member Polaroid mini poster set showcasing exclusive concept photography featured throughout the pop-up gallery.</p>
-              <a class="btn btn-secondary" href="#">View Details</a>
-            </div>
-          </article>
+          <img src="images/IMG_4382.jpg" alt="UNVEIL Gallery Concept Prints" />
+          <div class="product-body">
+            <span class="tag">collectibles</span>
+            <h2 class="card-title">UNVEIL Gallery Concept Prints</h2>
+            <p>Complete 8-member Polaroid mini poster set showcasing exclusive concept photography featured throughout the pop-up gallery.</p>
+            <a class="btn btn-secondary" href="#">View Details</a>
+          </div>
+        </article>
 
-          <article class="product-card">
-            <img src="images/IMG_4396.jpg" alt="Photocard Binder & Deco Organizer Kit" />
-            <div class="product-body">
-              <span class="tag">collectibles</span>
-              <h2 class="card-title">Photocard Binder & Deco Organizer Kit</h2>
-              <p>A customizable collection kit designed for organizing, displaying, and decorating photocards collected throughout the SKZ : UNVEIL experience. The kit includes a multi-pocket binder, decorative stickers, themed accessories, and creative elements that allow visitors to personalize their own collection style.</p>
-              <a class="btn btn-secondary" href="#">View Details</a>
-            </div>
-          </article>
+        <!-- Product Card 3 -->
+        <article class="product-card">
+          <img src="images/IMG_4396.jpg" alt="Photocard Binder & Deco Organizer Kit" />
+          <div class="product-body">
+            <span class="tag">collectibles</span>
+            <h2 class="card-title">Photocard Binder & Deco Organizer Kit</h2>
+            <p>A customizable collection kit designed for organizing, displaying, and decorating photocards collected throughout the SKZ : UNVEIL experience. The kit includes a multi-pocket binder, decorative stickers, themed accessories, and creative elements that allow visitors to personalize their own collection style.</p>
+            <a class="btn btn-secondary" href="#">View Details</a>
+          </div>
+        </article>
 
-          <article class="product-card">
-            <img src="images/IMG_4392.jpg" alt="Mystery Event Blind Pack" />
-            <div class="product-body">
-              <span class="tag">collectibles</span>
-              <h2 class="card-title">Mystery Event Blind Pack</h2>
-              <p>Sealed holographic pouch containing a handmade beaded strap, event stickers, and a surprise collectible mini photo card.</p>
-              <a class="btn btn-secondary" href="#">View Details</a>
-            </div>
-          </article>
-    
+        <!-- Product Card 4 -->
+        <article class="product-card">
+          <img src="images/IMG_4392.jpg" alt="Mystery Event Blind Pack" />
+          <div class="product-body">
+            <span class="tag">collectibles</span>
+            <h2 class="card-title">Mystery Event Blind Pack</h2>
+            <p>Sealed holographic pouch containing a handmade beaded strap, event stickers, and a surprise collectible mini photo card.</p>
+            <a class="btn btn-secondary" href="#">View Details</a>
+          </div>
+        </article>
 
-          <article class="product-card">
-            <img src="images/IMG_4390.jpeg" alt="DIY Craft Station Phone Strap" />
-            <div class="product-body">
-              <span class="tag">accessories</span>
-              <h2 class="card-title">DIY Craft Station Phone Strap</h2>
-              <p>Handcrafted phone strap featuring member letter beads, bow charms, and 3D character figures assembled at the event craft booth.</p>
-              <a class="btn btn-secondary" href="#">View Details</a>
-            </div>
-          </article>
+        <!-- Product Card 5 -->
+        <article class="product-card">
+          <img src="images/IMG_4390.jpeg" alt="DIY Craft Station Phone Strap" />
+          <div class="product-body">
+            <span class="tag">accessories</span>
+            <h2 class="card-title">DIY Craft Station Phone Strap</h2>
+            <p>Handcrafted phone strap featuring member letter beads, bow charms, and 3D character figures assembled at the event craft booth.</p>
+            <a class="btn btn-secondary" href="#">View Details</a>
+          </div>
+        </article>
 
-          
-
+        <!-- Product Card 6 -->
         <article class="product-card">
           <img src="images/IMG_4387.jpg" alt="VIP Member Fan Experience Kit" />
           <div class="product-body">
@@ -105,23 +122,8 @@
             <a class="btn btn-secondary" href="#">View Details</a>
           </div>
         </article>
-  
-        <!-- Product 3 -->
 
-       
-
-        <!-- Product 4 -->
-       
-
-
-       
-  
-        
-  
-        <!-- Product 5 -->
-        
-  
-        <!-- Product 6 -->
+        <!-- Product Card 7 -->
         <article class="product-card">
           <img src="images/IMG_4408.jpg" alt="Official Pop-Up Charm Bracelet" />
           <div class="product-body">
@@ -131,18 +133,8 @@
             <a class="btn btn-secondary" href="#">View Details</a>
           </div>
         </article>
-  
-        <!-- Product 7 -->
-       
-  
-        <!-- Product 8 -->
-        
-        <!-- Product 9 -->
-        
-        <!-- Product 10 -->
-        
-  
-        <!-- Product 11 -->
+
+        <!-- Product Card 8 -->
         <article class="product-card">
           <img src="images/IMG_4385.jpg" alt="Interactive Deco Station Starter Set" />
           <div class="product-body">
@@ -152,12 +144,8 @@
             <a class="btn btn-secondary" href="#">View Details</a>
           </div>
         </article>
-  
-        <!-- Product 12 -->
-        
-       
-  
-        <!-- Product 14 -->
+
+        <!-- Product Card 9 -->
         <article class="product-card">
           <img src="images/IMG_4391.jpg" alt="Pop-Up Event Memo Pad & Notepad Set" />
           <div class="product-body">
@@ -167,16 +155,14 @@
             <a class="btn btn-secondary" href="#">View Details</a>
           </div>
         </article>
-  
-        <!-- Product 15 -->
-       
-  
-       
-  
+
       </div>
     </div>
   </main>
 
+  <!-- =================================================================== -->
+  <!-- SITE FOOTER                                                         -->
+  <!-- =================================================================== -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
@@ -208,5 +194,13 @@
       <p>&copy; 2026 SKZ : UNVEIL. Fictional student concept only.</p>
     </div>
   </footer>
+
+  <!-- =================================================================== -->
+  <!-- JAVASCRIPT ATTACHMENTS                                              -->
+  <!-- =================================================================== -->
+  <script src="js/theme.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/filter.js"></script>
+
 </body>
 </html>

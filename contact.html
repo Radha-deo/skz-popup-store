@@ -4,12 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | SKZ : UNVEIL</title>
+
+  <!-- Typography & Google Fonts Preconnections -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  
+  <!-- SITE HEADER & MAIN NAVIGATION  -->
+  
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html">SKZ : UNVEIL</a>
@@ -25,8 +33,12 @@
     </div>
   </header>
 
+  
+  <!-- MAIN CONTENT: CONTACT & FAQ SECTION -->
   <main class="section">
     <div class="container contact-grid">
+
+      <!-- Left Column: FAQ & Info -->
       <section class="content-card">
         <span class="eyebrow">Contact</span>
         <h1>Get in touch</h1>
@@ -60,28 +72,56 @@
         </div>
       </section>
 
+      <!-- Right Column: Interactive Form (Part 4 Validation Target) -->
       <section class="content-card">
         <h2>Send a message</h2>
-        <form class="contact-form">
-          <label for="name">Name</label>
-          <input type="text" id="name" />
+        
+        <!-- Form Container with explicit ID for js/validate.js -->
+        <form id="contact-form" class="contact-form" novalidate>
+          
+          <!-- Name Input -->
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" />
+            <span class="error-msg" id="name-error" style="color:#e11d48; font-size:0.85rem; display:block; margin-top:0.25rem;"></span>
+          </div>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" />
+          <!-- Email Input -->
+          <div class="form-group" style="margin-top: 1rem;">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" />
+            <span class="error-msg" id="email-error" style="color:#e11d48; font-size:0.85rem; display:block; margin-top:0.25rem;"></span>
+          </div>
 
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" />
+          <!-- Subject Input -->
+          <div class="form-group" style="margin-top: 1rem;">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Inquiry topic" />
+          </div>
 
-          <label for="message">Message</label>
-          <textarea id="message" rows="6" placeholder="Tell us your question or inquiry..."></textarea>
+          <!-- Message Input -->
+          <div class="form-group" style="margin-top: 1rem;">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us your question or inquiry (at least 20 characters)..."></textarea>
+            <span class="error-msg" id="message-error" style="color:#e11d48; font-size:0.85rem; display:block; margin-top:0.25rem;"></span>
+          </div>
 
-          <button type="submit" class="btn btn-primary">Send Message</button>
-          <p class="form-note">This is a fictional student concept created for an assignment.</p>
+          <button type="submit" class="btn btn-primary" style="margin-top: 1.5rem;">Send Message</button>
+          <p class="form-note" style="margin-top: 1rem; font-size:0.85rem; color:#666;">This is a fictional student concept created for an assignment.</p>
         </form>
+
+        <!-- Dynamic Success Message Container -->
+        <div id="form-success" style="display: none; padding: 1.5rem; background: #e6f4ea; color: #137333; border-radius: 8px; margin-top: 1rem;">
+          <h3>Thank you for reaching out!</h3>
+          <p>Your message has been validated and sent successfully. The SKZ : UNVEIL team will reply soon.</p>
+        </div>
+
       </section>
+
     </div>
   </main>
 
+  <!-- SITE FOOTER     -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
@@ -113,5 +153,11 @@
       <p>&copy; 2026 SKZ : UNVEIL. Fictional student concept only.</p>
     </div>
   </footer>
+
+  <!-- JAVASCRIPT ATTACHMENTS          -->
+  <script src="js/components.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/validate.js"></script>
+
 </body>
 </html>
